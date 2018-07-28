@@ -19,9 +19,9 @@ exports.expressCreateServer = function (hook_name, args, cb) {
   // CommonJS loader on the client-side.
   var jsServer = new (Yajsml.Server)({
     rootPath: 'javascripts/src/'
-  , rootURI: 'http://localhost:' + settings.port + '/static/js/'
+  , rootURI: 'http://invalid.invalid/static/js/'
   , libraryPath: 'javascripts/lib/'
-  , libraryURI: 'http://localhost:' + settings.port + '/static/plugins/'
+  , libraryURI: 'http://invalid.invalid/static/plugins/'
   , requestURIs: minify.requestURIs // Loop-back is causing problems, this is a workaround.
   });
 
